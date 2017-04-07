@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import  './SignUp_css.css';
 import TableView from './TableView';
 
 class SignUp extends Component{
@@ -8,7 +9,7 @@ constructor(){
     myInfo : {
         fName:'',
         lName:'',
-        mobileNo:'',
+        e_mail:'',
         password:'',
         cPassword:''
     },
@@ -47,16 +48,16 @@ inputChange(changeValue,event){
 render(){
 return(
    <div>
-      <form>  
+      <form className="signUp_css">  
             <br></br><br></br>
             <label><b>First Name</b></label>
-            <input type="text" value={this.state.myInfo.fName} onChange={this.inputChange.bind(this,"fName")}/>
+            <input className="inputField" type="text" value={this.state.myInfo.fName} onChange={this.inputChange.bind(this,"fName")}/>
             <br></br><br></br>
             <label><b> Last Name</b></label>
             <input type="text" value={this.state.myInfo.lName} onChange={this.inputChange.bind(this,"lName")}/>
             <br></br><br></br>
-            <label><b>Mobile Number</b></label>
-            <input type="text" value={this.state.myInfo.mobileNo} onChange={this.inputChange.bind(this,"mobileNo")}/>
+            <label><b>E-mail</b></label>
+            <input type="text" value={this.state.myInfo.mobileNo} onChange={this.inputChange.bind(this,"e_mail")}/>
             <br></br><br></br>
             <label><b>New password</b></label>
             <input type="password" value={this.state.myInfo.password} onChange={this.inputChange.bind(this,"password")}/>
@@ -65,7 +66,7 @@ return(
             <input type="password" value={this.state.cPassword} onChange={this.inputChange.bind(this,"cPassword")}/>
             <br></br><br></br>
           
-            <button onClick={this.successMessage.bind(this)}>Create Account</button>
+            <button onClick={this.successMessage.bind(this)}><b>Create Account</b></button>
        </form>
 
         <div>

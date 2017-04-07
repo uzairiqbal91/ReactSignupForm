@@ -1,19 +1,17 @@
 import React,{Component} from 'react'
-
 class TableView extends Component{
     constructor(){
        super();
 
     }
     getlist(){
-        debugger;
-        //Every index of array has an instance of myInfo object.
+                //Every index of array has an instance of myInfo object.
       return (
       this.props.fields.map((item,index)=>{
         return <tr key={index} >
             <td>{item.fName}</td>
             <td>{item.lName}</td>
-            <td>{item.mobileNo}</td>
+            <td>{item.e_mail}</td>
             <td>{item.password}</td>
             <td>{item.cPassword}</td>
         </tr>
@@ -33,7 +31,7 @@ render(){
             Last Name
         </th>
         <th>
-            Mobile No
+            E-mail
         </th>
         <th>
             Password
@@ -44,6 +42,7 @@ render(){
     </tr>
     {this.getlist()}
   </table>
+  
 </div>
 )
  }
